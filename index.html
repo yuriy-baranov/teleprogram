@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Телепрограмма </title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0;'>
+    <link rel='stylesheet' href='./css/style.css'>
+    <link rel='stylesheet' href='./css/pop-up-window.css'>
+    <link rel='stylesheet' media='screen and (max-width: 640px)' href='./css/mobile.css'>
+    <link rel='stylesheet' media='screen and (min-width: 641px) and (max-width: 1300px)' href='./css/tablet.css'>
+    <script src='js/pop-up_window.js'></script>
+    <script src='data/programm.js'></script>
+    <script src='js/scroll_behavior.js'></script>
+</head>
+<body>
+    <header>
+        <div id='title'>
+            Телепрограмма
+        </div>
+    </header>
+    <div id='date-mobile'>
+        18 апреля
+    </div>
+    <div id='main'>
+        <ul id='dates'></ul>
+        <div id='hide-scroll-block'>
+            <div id='with-scroll-block'>
+                <table id='programm'>
+                </table>
+            </div>
+        </div>
+        <div id='channels-block'>
+            <ul id='channels' data-opened='false'>
+                <li class='channel chosen-channel'>
+                    <img class='channel-logo' src='pix/channels/1.jpg' alt='Первый канал - логотип'>
+                    <h1 class='channel-name'>Первый</h1>
+                </li>
+                <li class='channel'>
+                    <img class='channel-logo' src='pix/channels/2.jpg' alt='Россия 1 - логотип'>
+                    <h1 class='channel-name'>Россия 1</h1>
+                </li>
+                <li class='channel'>
+                    <img class='channel-logo' src='pix/channels/3.jpg' alt='Россия 1 - логотип'>
+                    <h1 class='channel-name'>ТВЦ</h1>
+                </li>
+                <li class='channel'>
+                    <img class='channel-logo' src='pix/channels/4.jpg' alt='Россия 1 - логотип'>
+                    <h1 class='channel-name'>Пятница</h1>
+                </li>
+                <li class='channel'>
+                    <img class='channel-logo' src='pix/channels/5.jpg' alt='Россия 1 - логотип'>
+                    <h1 class='channel-name'>Культура</h1>
+                </li>
+                <button id='mobile-chose-channel-btn' onclick="open_chose_channel_block()"></button>
+            </ul>
+        </div>
+    </div>
+    <div id='pop-up-wind' class='pop-up-wind-closed'>
+        <h1 id='film-name'> Название фильма </h1>
+        <img id='film_image' src='pix/film_image.png' alt='Картинка'>
+        <p id='description'> Описание фильма должно располагаться здесь. Если оно не влезает, то должна появиться прокруткa. </p>
+        <button id='close-btn' onclick="close_film_descr()"></button>
+    </div>
+
+    <script src='js/load_programm.js'></script>
+    <script src='js/index.js'></script>
+</body>
+</html>

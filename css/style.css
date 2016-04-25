@@ -1,0 +1,212 @@
+html {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    overflow: hidden;
+    background: url('http://www.zwalls.ru/pic/201310/1920x1080/zwalls.ru-18834.jpg');
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background: RGBA(60, 50, 50, 0.5);
+    background: linear-gradient(to bottom, #009eaa, #00ceef);
+    color: #ffffff;
+    width: 100%;
+    height: 9%;
+}
+
+#title {
+    text-align: center;
+    margin: auto;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 200%;  
+    font-style: italic;
+}
+
+#main {
+    display: flex;
+    width: 100%;
+    height: 91%;
+    justify-content: center;
+}
+
+#hide-scroll-block {
+    margin: 0px 2% 0px 2%;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+
+#with-scroll-block {
+    width: 200%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#programm {
+    width: 40%;
+    margin-left: 5%;
+    min-height: 60px;
+    cursor: pointer;
+    color: white;
+    background: RGBA(60, 50, 50, 0.5);
+}
+
+#dates {
+    position: unset;
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
+    width: 10%;
+    color: white;    
+}
+
+.date {
+    margin: 0px;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+    background: RGBA(60, 50, 50, 0.5);
+    cursor: pointer;
+}
+
+.date:active {
+    transform: scale(0.98);
+}
+
+.date:hover {
+    background: RGBA(60, 50, 50, 0.6);
+}
+
+.cur-date {
+    background: #00ceef;
+}
+
+.cur-date:hover {
+    background: #00ceef;
+}
+
+.time {
+    width: 16%;
+    padding: 2% 3% 2% 3%;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.film-name {
+    width: 74%;
+    padding: 2% 1%;
+    font-weight: bold;
+    font-family: Arial;
+    font-style: normal;
+    font-size: 120%;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+}
+
+.read_more_sign {
+    width: 10%;
+    height: 100%;
+}
+
+.open {
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    border-radius: 100px;
+    background: white;
+    visibility: hidden;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+tr:hover .open {
+    visibility: visible;
+}
+
+.open:hover {
+    background: RGB(100,200,100);
+}
+
+#channels-block {
+    width: 12%;
+}
+
+#channels {
+    margin: 0px;
+    width: 100%;
+    color: white;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.channel {
+    background: RGBA(60, 50, 50, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow: hidden;
+    width: 90%;
+    padding: 10px 0px 10px 10%;
+}
+
+.channel:hover {
+    background: RGBA(60, 50, 50, 0.6);
+}
+
+.channel img {
+    transition: transform 0.1s;
+}
+
+.channel:active img {
+    transform: scale(0.6);
+}
+
+.chosen-channel {
+    background: #00ceef;
+}
+
+.chosen-channel:hover {
+    background: #00ceef;
+}
+
+.channel-logo {
+    max-width: 40px;
+    max-height: 40px;
+    padding: 0px;
+    margin-right: 10px;
+}
+
+.channel-name {
+    margin-left: 10px;
+    display: inline;
+    font: bold 120% 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#channel-logo {
+    margin-top: 10%;
+    width: 100px;
+}
+
+#mobile-chose-channel-btn {
+    display: none;
+}
+
+#date-mobile {
+    display: none;
+}

@@ -1,0 +1,66 @@
+@keyframes pop-up_window_appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#pop-up-wind {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -10%;
+    width: 20%;
+    min-height: 30%;
+    padding-left: 25px;
+    background: white;
+    border-radius: 10px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0px 0px 20px 10px RGBA(0,0,0,0.2);
+    box-sizing: border-box;
+    transition: opacity 0.5s;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#film-name {
+    text-align: left;
+    font-size: 105;
+    margin-right: 20%;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+#film_image {
+    position: absolute;
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+}
+
+#description {
+    padding: 0px;
+    position: absolute;
+    margin-top: 5px;
+    left: 40%;
+    text-align: left;
+    width: 50%;
+    height: 60%;
+    font-size: auto;
+}
+
+#close-btn {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: white;
+    background-image: url('./../pix/close_btn.png');
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+
+.pop-up-wind-closed {
+    display: none;
+}
