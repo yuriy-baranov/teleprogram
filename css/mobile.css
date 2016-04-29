@@ -5,7 +5,6 @@ html {
 body {
     height: unset;
     scroll-behavior: smooth;
-    background: linear-gradient(to bottom, lightgray, indigo);
     background: cadetblue;
     overflow: scroll;
 }
