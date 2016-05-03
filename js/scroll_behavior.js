@@ -52,6 +52,7 @@ function changeChannel() {
     }
     this.classList.add('chosen-channel');
     setTimeout(openOrCloseChannels, 150);
+    document.body.scrollTop = 0;
 }
 
 function findFirstUnder(height) {
