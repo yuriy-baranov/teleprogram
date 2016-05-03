@@ -5,7 +5,7 @@ function load_program(channel_number) {
     for (var day = 0; day < 7; day++) {
         var day_data = week_program[day];
         for (var j = 0; j < day_data.program.length; j++) {
-            film = day_data.program[j];
+            var film = day_data.program[j];
             films += renderFilmRow(film.time, film.name, day_data.date);
         }
     }

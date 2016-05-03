@@ -211,3 +211,7 @@ tr:hover .open {
 #date-mobile {
     display: none;
 }
+
+li {
+    outline: 1px solid RGBA(0, 0, 0, 0.0);
+}

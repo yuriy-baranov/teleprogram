@@ -23,8 +23,8 @@ document.addEventListener('click', function(event) {
     if (elem.id == 'close-btn') {
         return close_film_descr();
     }
-    if (elem.closest('.film') !== null) {
-        return open_film_descr.bind(elem.closest('.film'))();
+    if (elem.parentElement.classList.contains('film')) {
+        return open_film_descr.bind(elem.parentElement)();
     }
     if (elem.classList.contains('date')) {
         return changeDate.bind(elem)();
