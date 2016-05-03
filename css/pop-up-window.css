@@ -1,33 +1,26 @@
-@keyframes pop-up_window_appear {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
 #pop-up-wind {
-    visibility: hidden;
     position: absolute;
     top: 0px;
     left: 50%;
-    margin-left: -10%;
-    width: 20%;
-    min-height: 30%;
+    width: 25%;
+    margin-left: -13.5%;
     padding-left: 25px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
     background: white;
     border-radius: 10px;
-    font-family: Calibri, 'Trebuchet MS', sans-serif;
-    box-shadow: 0px 0px 20px 10px RGBA(0,0,0,0.2);
+    box-shadow: 0px 0px 15px 7px RGBA(0,0,0,0.3);
     box-sizing: border-box;
-    transition: opacity 0.5s;
-    box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: visible;
+    transition: opacity 0.2s;
+    z-index: 6;
 }
 
 #film-name {
+    max-width: 75%;
     text-align: left;
-    font-size: 105;
     margin-right: 20%;
-    font-family: Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-family: Arial;
+    font-size: 130%;
 }
 
 #film_image {
@@ -38,29 +31,40 @@
 }
 
 #description {
-    padding: 0px;
-    position: absolute;
-    margin-top: 5px;
+    position: relative;
     left: 40%;
+    margin-top: 5px;
     text-align: left;
     width: 50%;
-    height: 60%;
     font-size: auto;
 }
 
 #close-btn {
     position: absolute;
+    cursor: pointer;
     right: 5%;
     top: 5%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: none;
-    background: white;
     background-image: url('./../pix/close_btn.png');
-    background-size: 100% 100%;
+    background-size: 100%;
     border-radius: 50%;
 }
 
-.pop-up-wind-closed {
+#pop-up-wind-back {
+    cursor: pointer;
     display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    z-index: 5;
+}
+
+.pop-up-wind-closed {
+    visibility: hidden;
+    opacity: 0;
 }

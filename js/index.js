@@ -1,22 +1,32 @@
 function main() {
-    load_programm(0);
-    var dates = document.getElementById('dates');
+    var dates_block = document.getElementById('dates');
+    var dates = '';
     for (var date = 18; date < 25; date++) {
-        var li = document.createElement('li');
-        li.textContent = date + ' апреля';
-        li.classList.add('date');
-        li.value = date;
-        li.onclick = changeDate;
-        dates.appendChild(li);
+        dates += `<li class='date' value=${date}> ${date} апреля </li>`
     }
-    dates.children[0].classList.add('cur-date');
+    dates_block.innerHTML = dates;
+    dates_block.children[0].classList.add('cur-date');
+    load_program(0);
     var channels = document.getElementsByClassName('channel');
     for (var i = 0; i < channels.length; i++) {
         channels[i].value = i;
         channels[i].addEventListener('click', changeChannel);
     }
-    document.getElementById('with-scroll-block').onscroll = handleScrollEvent;
-    document.body.onscroll = handleScrollEvent;
+    window.addEventListener('scroll', handleScrollEvent);
+    document.getElementById('with-scroll-block').addEventListener('scroll', handleScrollEvent);
+    document.getElementById('pop-up-wind-back').addEventListener('click', close_film_descr);
 }
 
 document.body.onload = main;
+document.addEventListener('click', function(event) {
+    var elem = event.target;
+    if (elem.id == 'close-btn') {
+        return close_film_descr();
+    }
+    if (elem.closest('.film') !== null) {
+        return open_film_descr.bind(elem.closest('.film'))();
+    }
+    if (elem.classList.contains('date')) {
+        return changeDate.bind(elem)();
+    }
+});

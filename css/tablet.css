@@ -8,18 +8,19 @@ header {
 }
 
 #hide-scroll-block {
-        width: 50%;
-        height: 100%;
-        overflow: hidden;
+    border: none;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
 }
 
 #with-scroll-block {
-        width: 200%;
-        height: 100%;
-        overflow-y: scroll;
+    width: 200%;
+    height: 100%;
+    overflow-y: scroll;
 }
 
-#programm {
+#program {
     width: 51%;
     margin: 0px;
 }
@@ -42,8 +43,6 @@ header {
 }
 
 #pop-up-wind {
-    min-height: 40%;
-    max-height: 100%;
     width: 40%;
     margin-left: -25%;
 }
@@ -55,9 +54,17 @@ header {
         max-height: 7vw;
     }
     
+    header {
+        height: 7%;
+    }
+    
+    #main {
+        height: 93%;
+    }
+    
     #pop-up-wind {
-        min-height: 40%;
-        width: 40%;
+        margin-left: -30%;
+        width: 50%;
     }
     
 }

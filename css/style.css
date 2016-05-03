@@ -21,6 +21,7 @@ header {
     background:  #00ceef;
     color: #ffffff;
     width: 100%;
+    margin: auto;
     height: 9%;
 }
 
@@ -55,7 +56,7 @@ header {
     overflow-y: scroll;
 }
 
-#programm {
+#program {
     width: 40%;
     margin-left: 5%;
     min-height: 60px;
@@ -119,12 +120,12 @@ header {
     text-align: left;
 }
 
-.read_more_sign {
+.read-more-circle {
     width: 10%;
     height: 100%;
 }
 
-.open {
+.open-circle {
     width: 15px;
     height: 15px;
     margin: auto;
@@ -155,6 +156,7 @@ tr:hover .open {
 }
 
 .channel {
+    cursor: pointer;
     background: RGBA(60, 50, 50, 0.5);
     display: flex;
     align-items: center;
@@ -194,7 +196,7 @@ tr:hover .open {
 .channel-name {
     margin-left: 10px;
     display: inline;
-    font: bold 120% 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font: bold 120% Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #channel-logo {

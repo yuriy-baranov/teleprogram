@@ -6,7 +6,7 @@ body {
     height: unset;
     scroll-behavior: smooth;
     background: cadetblue;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 header {
@@ -23,7 +23,7 @@ header {
 
 #main {
     position: relative;
-    top: 80px;
+    top: 100px;
     width: 100%;
     height: unset;
     overflow: visible;
@@ -43,7 +43,7 @@ header {
     overflow: visible;
 }
 
-#programm {
+#program {
     margin: unset;
     width: 100%;
 }
@@ -78,21 +78,21 @@ header {
     background: white;
 }
 
-#channels-block[data-opened='true'] {
+#channels-block[data-status='opened'] {
     transform: translate(0%);
     box-shadow: -10px 7px 15px 5px RGBA(0, 0, 0, 0.5);
 }
 
-#channels-block[data-opened='false'] {
+#channels-block[data-status='closed'] {
     transform: translate(100%);
     box-shadow: none;
 }
 
-#channels-block[data-opened='true'] #mobile-chose-channel-btn::before {
+#channels-block[data-status='opened'] #mobile-chose-channel-btn::before {
     content: '>>';
 }
 
-#channels-block[data-opened='false'] #mobile-chose-channel-btn:before {
+#channels-block[data-status='closed'] #mobile-chose-channel-btn:before {
     content: '<<';
 }
 
@@ -176,9 +176,12 @@ header {
     header {
           height: 12vh;
     }
+    #main {
+        top: 80px;
+    }
     #date-mobile {
-        margin-left: -40%;
-        width: 80%;
+        margin-left: -45%;
+        width: 90%;
         height: 10vh;
         top: 12vh;
     }

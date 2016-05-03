@@ -1,40 +1,39 @@
-function close_film_descr() {
-    var wind = document.getElementById('pop-up-wind');
-    wind.classList.add('pop-up-wind-closed');
+function posY(film_block) {
+    var scrolled_pixels = document.getElementById('with-scroll-block').scrollTop;
+    return document.getElementById('main').offsetTop + film_block.offsetTop - scrolled_pixels;
 }
 
-function open(event) {
-    event.preventDefault();
+function is_upper_mid(film_block) {
+    var visible_height = document.body.offsetHeight;
+    return posY(film_block) < visible_height / 2 ? true : false;
+}
+
+function close_film_descr() {
+    document.getElementById('pop-up-wind').classList.add('pop-up-wind-closed');
+    document.getElementById('pop-up-wind-back').style.display = 'none';
+}
+
+function open_film_descr() {
+    document.getElementById('pop-up-wind-back').style.display = 'block';
     var wind = document.getElementById('pop-up-wind');
     wind.classList.remove('pop-up-wind-closed');
-    wind.style.visibility = 'visible';
-    wind.style.opacity = '1';
-    wind.childNodes[1].textContent = this.childNodes[1].textContent;
-    var crow = this;
-    if (is_upper_mid(crow)) {
-        console.log('u');
-        wind.style.top = posY(crow) + crow.offsetHeight + 'px';
+    wind.childNodes[1].textContent = this.children[1].textContent;
+    var chosen_film = this;
+    if (is_upper_mid(chosen_film)) {
+        wind.style.top = (posY(chosen_film) + chosen_film.offsetHeight) + 'px';
         wind.style.marginTop = 'unset';
     } else {
-        console.log('d');
         wind.style.marginTop = '-' + wind.offsetHeight + 'px';
-        wind.style.top = posY(crow) + 'px';
+        wind.style.top = posY(chosen_film) + 'px';
     }
 }
 
-var channel_block_visible = 0;
-
-function open_chose_channel_block() {
-    if (channel_block_visible) {
-        return close_chose_channel_block();
+function openOrCloseChannels() {
+    var channels_block = document.getElementById('channels-block');
+    if (channels_block.dataset.status == 'opened') {
+        channels_block.dataset.status = 'closed';
     }
-    var channel_div = document.getElementById('channels-block');
-    channel_div.dataset.opened = 'true';
-    channel_block_visible = 1;
-}
-
-function close_chose_channel_block() {
-    var channel_div = document.getElementById('channels-block');
-    channel_div.dataset.opened = 'false';
-    channel_block_visible = 0;
+    else {
+        channels_block.dataset.status = 'opened';
+    }
 }

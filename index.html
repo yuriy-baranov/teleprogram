@@ -9,8 +9,9 @@
     <link rel='stylesheet' media='screen and (max-width: 640px)' href='./css/mobile.css'>
     <link rel='stylesheet' media='screen and (min-width: 641px) and (max-width: 1300px)' href='./css/tablet.css'>
     <script src='js/pop-up_window.js'></script>
-    <script src='data/programm.js'></script>
+    <script src='data/program.js'></script>
     <script src='js/scroll_behavior.js'></script>
+    <script src='js/load_program.js'></script>
 </head>
 <body>
     <header>
@@ -25,12 +26,12 @@
         <ul id='dates'></ul>
         <div id='hide-scroll-block'>
             <div id='with-scroll-block'>
-                <table id='programm'>
+                <table id='program'>
                 </table>
             </div>
         </div>
         <div id='channels-block'>
-            <ul id='channels' data-opened='false'>
+            <ul id='channels' data-status='closed'>
                 <li class='channel chosen-channel'>
                     <img class='channel-logo' src='pix/channels/1.jpg' alt='Первый канал - логотип'>
                     <h1 class='channel-name'>Первый</h1>
@@ -51,18 +52,17 @@
                     <img class='channel-logo' src='pix/channels/5.jpg' alt='Россия 1 - логотип'>
                     <h1 class='channel-name'>Культура</h1>
                 </li>
-                <button id='mobile-chose-channel-btn' onclick="open_chose_channel_block()"></button>
+                <button id='mobile-chose-channel-btn' onclick="openOrCloseChannels()"></button>
             </ul>
         </div>
     </div>
     <div id='pop-up-wind' class='pop-up-wind-closed'>
         <h1 id='film-name'> Название фильма </h1>
         <img id='film_image' src='pix/film_image.png' alt='Картинка'>
-        <p id='description'> Описание фильма должно располагаться здесь. Если оно не влезает, то должна появиться прокруткa. </p>
-        <button id='close-btn' onclick="close_film_descr()"></button>
+        <p id='description'> Описание фильма. Если нажатие произошло ниже середины экрана, то это окно должно появиться над названием фильма, иначе - под. Это окно можно закрыть кликом в пустую область. </p>
+        <button id='close-btn'></button>
     </div>
-
-    <script src='js/load_programm.js'></script>
+    <div id='pop-up-wind-back'><div>
     <script src='js/index.js'></script>
 </body>
 </html>
